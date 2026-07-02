@@ -347,3 +347,13 @@ Behind the scenes:
 # Conclusion
 
 In summary, Kubernetes architecture consists of a managed control plane that maintains the desired state of the cluster and worker nodes that execute application workloads. The API Server acts as the central communication hub, etcd stores the cluster state, the Scheduler places workloads, the Controller Manager continuously reconciles the cluster for self-healing, kubelet manages Pods on each node, containerd runs the containers, and kube-proxy provides Service networking. Together, these components enable automated deployment, scaling, networking, high availability, and fault tolerance for containerized applications.
+
+| Feature                     | Purpose                                                        |
+| --------------------------- | -------------------------------------------------------------- |
+| Node labels                 | Categorize nodes (e.g., `environment=prod`, `accelerator=gpu`) |
+| Node affinity               | Require or prefer specific node types                          |
+| Taints                      | Reserve nodes for specific workloads                           |
+| Tolerations                 | Allow approved workloads onto tainted nodes                    |
+| Pod anti-affinity           | Spread replicas for high availability                          |
+| Topology spread constraints | Balance Pods across nodes or Availability Zones                |
+
